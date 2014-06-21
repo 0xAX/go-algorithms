@@ -12,6 +12,11 @@ usage
 
 3. Execute `go build bubble_sort.go` and `./bubble_sort`
 
+todo
+------
+
+  * Add `Makefile`
+
 contribution
 ------------
 
