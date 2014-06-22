@@ -12,6 +12,14 @@ usage
 
 3. Execute `go build bubble_sort.go` and `./bubble_sort`
 
+alghoritms
+----------
+
+#### Sorting
+
+  * bubble sort
+  * selection sort
+
 todo
 ------
 
