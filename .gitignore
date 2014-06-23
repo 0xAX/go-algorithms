@@ -25,3 +25,4 @@ _testmain.go
 
 sorting/bubble_sort
 sorting/selection_sort
+sorting/merge_sort

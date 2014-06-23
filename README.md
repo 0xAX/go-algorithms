@@ -19,6 +19,7 @@ alghoritms
 
   * bubble sort
   * selection sort
+  * merge sort
 
 todo
 ------
