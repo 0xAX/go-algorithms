@@ -1,7 +1,7 @@
-go-alghoritms
+go-algorithms
 =============
 
-`go-alghoritms` - implemetation of different alghoritms and data structures with `golang`.
+`go-algorithms` - implemetation of different alghoritms and data structures with `golang`.
 
 usage
 -----
