@@ -20,12 +20,9 @@ alghoritms
   * bubble sort
   * selection sort
   * merge sort
-
-todo
-------
-
-  * Add `Makefile`
-
+  * cocktail sort
+  * gnome sort
+  
 contribution
 ------------
 
