@@ -6,9 +6,9 @@ go-algorithms
 usage
 -----
 
-1. Clone `https://github.com/0xAX/go-alghoritms.git` repo, it must be in your `$GOPATH`.
+1. Clone `https://github.com/0xAX/go-algorithms.git` repo, it must be in your `$GOPATH`.
 
-2. Execute `go build && go install` in `go-alghoritms`
+2. Execute `go build && go install` in `go-algorithms`
 
 3. Execute `go build bubble_sort.go` and `./bubble_sort`
 
@@ -26,7 +26,7 @@ alghoritms
 contribution
 ------------
 
-  * Fork [go-alghoritms](https://github.com/0xAX/go-alghoritms);
+  * Fork [go-algorithms](https://github.com/0xAX/go-algorithms);
   * Make changes;
   * Send pull request;
   * Thank you.
@@ -34,4 +34,4 @@ contribution
 author
 ------
 
-[@0xAX](https://github.com/0xAX/go-alghoritms)
+[@0xAX](https://twitter.com/0xAX)
