@@ -22,6 +22,7 @@ alghoritms
   * merge sort
   * cocktail sort
   * gnome sort
+  * quick sort
   
 contribution
 ------------
