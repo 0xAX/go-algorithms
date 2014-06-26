@@ -23,6 +23,9 @@ alghoritms
   * cocktail sort
   * gnome sort
   * quick sort
+  * comb sort
+  * odd/even sort
+  * heap sort
   
 contribution
 ------------

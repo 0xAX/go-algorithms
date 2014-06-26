@@ -29,3 +29,6 @@ sorting/merge_sort
 sorting/cocktail_sort
 sorting/gnome_sort
 sorting/quick_sort
+sorting/comb_sort
+sorting/odd_even_sort
+sorting/heap_sort
