@@ -26,6 +26,7 @@ alghoritms
   * comb sort
   * odd/even sort
   * heap sort
+  * Shell sort
   * counting sort
 
 #### Searching
