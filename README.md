@@ -26,6 +26,11 @@ alghoritms
   * comb sort
   * odd/even sort
   * heap sort
+  * counting sort
+
+#### Searching
+
+#### Data structures
   
 contribution
 ------------
