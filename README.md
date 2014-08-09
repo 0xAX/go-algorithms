@@ -29,10 +29,10 @@ alghoritms
   * Shell sort
   * counting sort
 
-#### Searching
+#### Collections
 
-#### Data structures
-  
+  * doubly linked list
+   
 contribution
 ------------
 
