@@ -32,6 +32,7 @@ alghoritms
 #### Collections
 
   * doubly linked list
+  * binary tree
    
 contribution
 ------------
