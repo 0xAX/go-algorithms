@@ -33,7 +33,8 @@ alghoritms
 
   * doubly linked list
   * binary tree
-   
+  * stack
+ 
 contribution
 ------------
 
