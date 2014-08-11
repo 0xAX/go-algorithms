@@ -34,6 +34,7 @@ alghoritms
   * doubly linked list
   * binary tree
   * stack
+  * queue
  
 contribution
 ------------
