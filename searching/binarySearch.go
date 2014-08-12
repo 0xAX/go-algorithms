@@ -1,7 +1,6 @@
 package main
 
 import "fmt"
-//import "sort"
 
 func main() {
 	searchValue := 0
