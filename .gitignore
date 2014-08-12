@@ -33,3 +33,5 @@ sorting/comb_sort
 sorting/odd_even_sort
 sorting/heap_sort
 sorting/counting_sort
+
+searching/binarySearch
