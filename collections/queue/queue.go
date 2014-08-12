@@ -30,4 +30,4 @@ func (q *Queue) Peek() interface{} {
 func (q *Queue) Add(value interface{}) {
     q.len += 1
     q.queue = append(q.queue, value)
-} 
+}
