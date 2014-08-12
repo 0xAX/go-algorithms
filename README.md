@@ -35,6 +35,10 @@ alghoritms
   * binary tree
   * stack
   * queue
+
+#### Algorithms
+
+  * gcd
  
 contribution
 ------------
