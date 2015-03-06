@@ -3,7 +3,7 @@ go-algorithms
 
 `go-algorithms` - implemetation of different alghoritms and data structures with `golang`.
 
-usage
+Usage
 -----
 
 1. Clone `https://github.com/0xAX/go-algorithms.git` repo, it must be in your `$GOPATH`.
@@ -12,7 +12,7 @@ usage
 
 3. Execute `go build bubble_sort.go` and `./bubble_sort`
 
-alghoritms
+Alghoritms
 ----------
 
 #### Sorting
@@ -44,7 +44,7 @@ alghoritms
 
   * gcd
  
-contribution
+Contribution
 ------------
 
   * Fork [go-algorithms](https://github.com/0xAX/go-algorithms);
@@ -52,7 +52,7 @@ contribution
   * Send pull request;
   * Thank you.
 
-author
+Author
 ------
 
 [@0xAX](https://twitter.com/0xAX)
