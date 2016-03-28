@@ -30,11 +30,11 @@ func (stack *Stack) IsEmpty() bool {
 }
 
 func (stack *Stack) Push(value interface{}) {
-    stack.len += 1
     add(stack, value)
 } 
 
 func add(slice *Stack, value interface{}) {
+    slice.len += 1
     var tmpSlice []interface{} = make([]interface{}, slice.len)
     if slice.len == 0 {
         slice.st[0] = value
