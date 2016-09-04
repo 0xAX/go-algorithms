@@ -1,7 +1,7 @@
 go-algorithms
 =============
 
-`go-algorithms` - implemetation of different alghoritms and data structures with `golang`.
+`go-algorithms` - implementation of different algorithms and data structures with `golang`.
 
 Usage
 -----
@@ -12,7 +12,7 @@ Usage
 
 3. Execute `go build bubble_sort.go` and `./bubble_sort`
 
-Alghoritms
+Algorithms
 ----------
 
 #### Sorting
@@ -40,7 +40,7 @@ Alghoritms
   * stack
   * queue
 
-#### Algorithms
+#### Numerical
 
   * gcd
  
