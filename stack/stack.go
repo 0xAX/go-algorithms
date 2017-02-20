@@ -1,61 +1,47 @@
 package stack
 
-type Stack struct {
-	st  []interface{}
-	len int
+type StackItem struct {
+	item interface{}
+	next *StackItem
 }
 
+// Stack is a base structure for LIFO
+type Stack struct {
+	sp    *StackItem
+	depth uint64
+}
+
+// Initialzes new Stack
 func New() *Stack {
-	stack := &Stack{}
-	stack.st = make([]interface{}, 1)
-	stack.len = 0
+	var stack *Stack = new(Stack)
+
+	stack.depth = 0
 	return stack
 }
 
-func (stack *Stack) Length() int {
-	return stack.len
+// Pushes a given item into Stack
+func (stack *Stack) Push(item interface{}) {
+	stack.sp = &StackItem{item: item, next: stack.sp}
+	stack.depth++
 }
 
-func (stack *Stack) Pop() {
-	stack.st = stack.st[1:]
-	stack.len -= 1
+// Deletes top of a stack and return it
+func (stack *Stack) Pop() interface{} {
+	if stack.depth > 0 {
+		item := stack.sp.item
+		stack.sp = stack.sp.next
+		stack.depth--
+		return item
+	}
+
+	return nil
 }
 
+// Returns top of a stack without deletion
 func (stack *Stack) Peek() interface{} {
-	return stack.st[0]
-}
-
-func (stack *Stack) IsEmpty() bool {
-	return (stack.len == 0)
-}
-
-func (stack *Stack) Push(value interface{}) {
-	add(stack, value)
-}
-
-func add(slice *Stack, value interface{}) {
-	slice.len += 1
-	var tmpSlice []interface{} = make([]interface{}, slice.len)
-	if slice.len == 0 {
-		slice.st[0] = value
-		return
+	if stack.depth > 0 {
+		return stack.sp.item
 	}
 
-	for i := 0; i < slice.len; i++ {
-		tmpSlice[i] = 0
-	}
-
-	for i := 0; i < slice.len; i++ {
-		if i == 0 {
-			tmpSlice[0] = value
-		} else {
-			tmpSlice[i] = slice.st[i-1]
-		}
-
-		if i == slice.len-1 {
-			break
-		}
-	}
-
-	slice.st = tmpSlice
+	return nil
 }

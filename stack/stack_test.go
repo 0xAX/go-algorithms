@@ -2,24 +2,20 @@ package stack
 
 import "testing"
 
-func Test_Stack(t *testing.T) {
-	stack := New()
+func TestStack(t *testing.T) {
+	var stack *Stack = New()
 
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(3)
+	stack.Push(4)
 	stack.Push(5)
-	stack.Push(6)
-	stack.Push(7)
 
-	if stack.Length() != 3 {
-		t.Error("[Error] stack length is wrong")
-	}
+	for i := 5; i > 0; i-- {
+		item := stack.Pop()
 
-	stack.Pop()
-
-	if stack.Length() != 2 {
-		t.Error("[Error] stack length is wrong after pop")
-	}
-
-	if stack.Peek() != 6 {
-		t.Error("[Error] stack Peek is wrong")
+		if item != i {
+			t.Error("TestStack failed...", i)
+		}
 	}
 }
