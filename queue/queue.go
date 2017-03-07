@@ -1,33 +1,75 @@
+/* queue.go - A generic queue implementation
+ *
+ * This file is part of ds library.
+ *
+ * The MIT License (MIT)
+ * Copyright (c) <2016> Alexander Kuleshov <kuleshovmail@gmail.com>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ * of the Software, and to permit persons to whom the Software is furnished to do
+ * so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+ * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+ 
 package queue
 
+type QueueItem struct {
+	item interface{}
+	prev *QueueItem
+}
+
+// Base data structure for Queue
 type Queue struct {
-    queue []interface{}
-    len int
+	current *QueueItem
+	last *QueueItem
+	depth uint64
 }
 
+// Initializes new Queue and return it
 func New() *Queue {
-    queue := &Queue{}
-    queue.queue = make([]interface{}, 0)
-    queue.len = 0
-    return queue
+	var queue *Queue = new(Queue)
+
+	queue.depth = 0
+
+	return queue
 }
 
-func (queue *Queue) Length() int {
-    return queue.len
+// Puts a given item into Queue
+func (queue *Queue) Enqueue(item interface{}) {
+	if (queue.depth == 0) {
+		queue.current = &QueueItem{item: item, prev: nil}
+		queue.last = queue.current
+		queue.depth++
+		return
+	}
+		
+	q := &QueueItem{item: item, prev: nil}
+	queue.last.prev = q
+	queue.last = q
+	queue.depth++
 }
 
-func (q *Queue) Remove() interface{} {
-    tmp := q.queue[0]
-    q.queue = q.queue[1:]
-    q.len -= 1
-    return tmp
-}
+// Extracts first item from the Queue
+func (queue *Queue) Dequeue() interface{} {
+	if (queue.depth > 0) {
+		item := queue.current.item
+		queue.current = queue.current.prev
+		queue.depth--
+		
+		return item
+	}
 
-func (q *Queue) Peek() interface{} {
-    return q.queue[0]
-}
-
-func (q *Queue) Add(value interface{}) {
-    q.len += 1
-    q.queue = append(q.queue, value)
+	return nil
 }

@@ -1,29 +1,47 @@
+/* queue_test.go - Test for generic queue implementation
+ *
+ * This file is part of ds library.
+ *
+ * The MIT License (MIT)
+ * Copyright (c) <2016> Alexander Kuleshov <kuleshovmail@gmail.com>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ * of the Software, and to permit persons to whom the Software is furnished to do
+ * so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+ * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
 package queue
 
 import "testing"
 
-func Test_Queue(t *testing.T) {
-    queue := New()
+func TestQueue(t *testing.T) {
+	var queue *Queue = New()
 
-    queue.Add(1)
-    queue.Add(2)
-    queue.Add(3)
+	queue.Enqueue(1)
+	queue.Enqueue(2)
+	queue.Enqueue(3)
+	queue.Enqueue(4)
+	queue.Enqueue(5)
 
-    if queue.Length() != 3 {
-        t.Error("[Error] queue length is wrong")
-    }
+	for i := 1; i < 6; i++ {
+		item := queue.Dequeue()
 
-    element := queue.Remove()
+		if (item != i) {
+			t.Error("TestQueue failed...", i)
+		}
+	}
 
-    if element != 1 {
-        t.Error("[Error] remove is wrong")
-    }
-
-    if queue.Length() != 2 {
-        t.Error("[Error] queue length is wrong after pop")
-    }
-    
-    if queue.Peek() != 2 {
-        t.Error("[Error] queue Peek is wrong")
-    }
 }
