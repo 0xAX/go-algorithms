@@ -31,8 +31,8 @@ func Insert(value interface{}, list *List) *List {
         list.head = newItem
         list.last = newItem
     } else {
-        list.head = newItem
         list.head.prev = newItem
+        list.head = newItem
         list.last.next = newItem
     }
  
