@@ -12,18 +12,16 @@ func main() {
 	fmt.Println("Initial array is:", arr)
 	fmt.Println("")
 
-	if (len(arr) <= 1) {
+	if len(arr) <= 1 {
 		fmt.Println("Sorted array is: ", arr)
 		return
 	}
 
-	for curr := 1; curr < len(arr); curr++ {
-		curr_val := arr[curr]
-		prev := curr - 1
-		for ; prev >= 0 && arr[prev] > curr_val; prev-- {
-			arr[prev + 1] = arr[prev]
+	var i, j int
+	for i = 1; i < len(arr); i++ {
+		for j = i; j > 0 && arr[j] < arr[j-1]; j-- {
+			arr[j], arr[j-1] = arr[j-1], arr[j]
 		}
-		arr[prev + 1] = curr_val
 	}
 
 	fmt.Println("Sorted array is: ", arr)
