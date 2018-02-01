@@ -1,45 +1,34 @@
-package main
+package comb_sort
 
-/*
- * Comb sort - https://en.wikipedia.org/wiki/Combsort
- */
+import (
+	sortable "github.com/0xAX/go-algorithms/sort"
+)
 
-import "fmt"
+func Sort(data sortable.Sortable) sortable.Sortable {
+	gap := data.Len()
 
-import "github.com/0xAX/go-algorithms"
+	for {
+		if gap > 1 {
+			gap = gap * 100 / 124
+		}
 
-func main() {
-    arr := utils.RandArray(10)
-    fmt.Println("Initial array is:", arr)
-    fmt.Println("")
-    
-    tmp := 0
-    gap := len(arr)
-    
-    for {
-        if gap > 1 {
-            gap = gap * 100 / 124
-        }
-        
-        for i := 0 ; ; {
-        
-            if arr[i] > arr[i + gap]  {         
-                tmp = arr[i]
-                arr[i] = arr[i + gap]
-                arr[i + gap] = tmp              
-            }
+		for i := 0; ; {
 
-            i++
-            
-            if i + gap >= len(arr){
-                break
-            }
-        }
+			if data.Less(i+gap, i) {
+				data.Swap(i, i+gap)
+			}
 
-        if gap == 1 {
-            break
-        }
-    }
+			i++
 
-    fmt.Println("Sorted array is: ", arr)
+			if i+gap >= data.Len() {
+				break
+			}
+		}
+
+		if gap == 1 {
+			break
+		}
+	}
+
+	return data
 }
