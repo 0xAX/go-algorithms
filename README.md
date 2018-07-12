@@ -45,6 +45,8 @@ Algorithms
 #### Numerical
 
   * [gcd](https://en.wikipedia.org/wiki/Greatest_common_divisor)
+  * [factorial](https://en.wikipedia.org/wiki/Factorial)
+  * [fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number)
 
 Contribution
 ------------
