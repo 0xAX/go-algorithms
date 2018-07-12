@@ -8,7 +8,6 @@ func factorial(num int) int {
   return num * factorial(num - 1)
 }
 
-
 func main() {
   num := 10
   result := factorial(num)
