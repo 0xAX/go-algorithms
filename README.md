@@ -32,6 +32,8 @@ Algorithms
 #### Searching
 
   * [binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+  * [linear search](https://en.wikipedia.org/wiki/Linear_search)
+  * [jump search](https://en.wikipedia.org/wiki/Jump_search)
 
 #### Collections
 
@@ -43,7 +45,9 @@ Algorithms
 #### Numerical
 
   * [gcd](https://en.wikipedia.org/wiki/Greatest_common_divisor)
- 
+  * [factorial](https://en.wikipedia.org/wiki/Factorial)
+  * [fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number)
+
 Contribution
 ------------
 
