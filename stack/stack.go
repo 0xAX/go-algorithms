@@ -37,7 +37,7 @@ func (stack *Stack) Pop() interface{} {
 	return nil
 }
 
-// Returns top of a stack without deletion
+// Peek returns top of a stack without deletion
 func (stack *Stack) Peek() interface{} {
 	if stack.depth > 0 {
 		return stack.sp.item
