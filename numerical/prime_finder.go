@@ -1,4 +1,4 @@
-package main
+package numerical
 
 // PrimesUpTo finds all prime numbers from 1 to upperBound
 // It's implemented using eratosthenes sieve

@@ -1,47 +1,48 @@
-package gcd
+package numerical
 
-func gcd(x uint, y uint) uint {
-    
-    var shift uint = 0
+// GCD returns gcd of x and y
+func GCD(x uint, y uint) uint {
 
-    if x == y {
-        return x
-    }
+	var shift uint = 0
 
-    if x == 0 {
-        return y
-    }
+	if x == y {
+		return x
+	}
 
-    if y == 0 {
-        return x
-    }
+	if x == 0 {
+		return y
+	}
 
-    for shift := 0; (x | y) & 1 == 0; shift++ {
-        x = x >> 1
-        y = y >> 1
-    }
+	if y == 0 {
+		return x
+	}
 
-    for ; (x & 1) == 0 ; {
-        x = x >> 1
-    }
+	for shift := 0; (x|y)&1 == 0; shift++ {
+		x = x >> 1
+		y = y >> 1
+	}
 
-    for ; y == 0 ; {
-        
-        for ; (y & 1) == 0 ; {
-            y = y >> 1
-        }
+	for (x & 1) == 0 {
+		x = x >> 1
+	}
 
-        if x > y {
-            t := x
-            x = y
-            y = t
-        }
+	for y == 0 {
 
-        y = y - x
+		for (y & 1) == 0 {
+			y = y >> 1
+		}
 
-    }
+		if x > y {
+			t := x
+			x = y
+			y = t
+		}
 
-    y = y << shift
+		y = y - x
 
-    return y
+	}
+
+	y = y << shift
+
+	return y
 }

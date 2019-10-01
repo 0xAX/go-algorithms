@@ -1,18 +1,19 @@
-package gcd
+package numerical
 
 import "testing"
 
-func Test_gcd(t *testing.T) {
+// TestGcd tests gcd
+func TestGcd(t *testing.T) {
 
-	if gcd(100, 200) != 50 {
-		t.Error("[Error] gcd(100, 200) is wrong")
+	if GCD(100, 200) != 50 {
+		t.Error("[Error] GCD(100, 200) is wrong")
 	}
 
-	if gcd(4, 2) != 1 {
-		t.Error("[Error] gcd(4,2) is wrong")
+	if GCD(4, 2) != 1 {
+		t.Error("[Error] GCD(4,2) is wrong")
 	}
 
-	if gcd(6, 3) != 3 {
-		t.Error("[Error] gcd(6,3) is wrong")
+	if GCD(6, 3) != 3 {
+		t.Error("[Error] GCD(6,3) is wrong")
 	}
 }
