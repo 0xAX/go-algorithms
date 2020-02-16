@@ -1,6 +1,7 @@
 package main
 
 import (
+	"sort"
 	"testing"
 
 	utils "github.com/0xAX/go-algorithms"
@@ -29,7 +30,7 @@ func TestSort(t *testing.T) {
 
 			tt.f(arr)
 
-			if !isSorted(arr) {
+			if !sort.IntsAreSorted(arr) {
 				t.Errorf("%v is not sorted", arr)
 			}
 		})
@@ -50,14 +51,4 @@ func BenchmarkSort(b *testing.B) {
 			}
 		})
 	}
-}
-
-func isSorted(arr []int) bool {
-	for i := 0; i < len(arr) - 1; i++ {
-		if arr[i] > arr[i + 1] {
-			return false
-		}
-	}
-
-	return true
 }
