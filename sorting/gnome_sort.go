@@ -3,16 +3,7 @@ package main
 /*
  * Gnome sort - https://en.wikipedia.org/wiki/Gnome_sort
  */
-
-import "fmt"
-
-import "github.com/0xAX/go-algorithms"
-
-func main() {
-	arr := utils.RandArray(10)
-    fmt.Println("Initial array is:", arr)
-    fmt.Println("")
-	
+func GnomeSort(arr []int) {
 	i := 1
 	tmp := 0
 	for ; i < len(arr) ; {
@@ -28,7 +19,4 @@ func main() {
 			}
 		}
 	}
-
-	fmt.Println("Sorted array is: ", arr)
 }
-

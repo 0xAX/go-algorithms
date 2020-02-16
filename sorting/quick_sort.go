@@ -4,10 +4,7 @@ package main
  * Quick sort - https://en.wikipedia.org/wiki/Quicksort
  */
 
-import "fmt"
 import "math/rand"
-
-import "github.com/0xAX/go-algorithms"
 
 func quick_sort(arr []int) []int {
     
@@ -41,9 +38,9 @@ func quick_sort(arr []int) []int {
     return low_part
 }
 
-func main() {
-    arr := utils.RandArray(10)
-    fmt.Println("Initial array is:", arr)
-    fmt.Println("")
-    fmt.Println("Sorted array is: ", quick_sort(arr))
-}
+//func main() {
+//    arr := utils.RandArray(10)
+//    fmt.Println("Initial array is:", arr)
+//    fmt.Println("")
+//    fmt.Println("Sorted array is: ", quick_sort(arr))
+//}

@@ -4,15 +4,7 @@ package main
  * Selection sort - http://en.wikipedia.org/wiki/Selection_sort
  */
 
-import "fmt"
-
-import "github.com/0xAX/go-algorithms"
-
-func main() {
-    arr := utils.RandArray(10)
-    fmt.Println("Initial array is:", arr)
-    fmt.Println("")
-
+func SelectionSort(arr []int) {
     var min int = 0
     var tmp int = 0
 
@@ -23,11 +15,9 @@ func main() {
                 min = j
             }
         }
-		
+
         tmp = arr[i]
         arr[i] = arr[min]
         arr[min] = tmp
     }
-
-    fmt.Println("Sorted array:    ", arr)
 }

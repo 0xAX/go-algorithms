@@ -4,15 +4,7 @@ package main
  * Comb sort - https://en.wikipedia.org/wiki/Combsort
  */
 
-import "fmt"
-
-import "github.com/0xAX/go-algorithms"
-
-func main() {
-	arr := utils.RandArray(10)
-	fmt.Println("Initial array is:", arr)
-	fmt.Println("")
-
+func CombSort(arr []int) {
 	tmp := 0
 	arrLen := len(arr)
 	gap := arrLen
@@ -27,6 +19,4 @@ func main() {
 			}
 		}
 	}
-
-	fmt.Println("Sorted array is: ", arr)
 }

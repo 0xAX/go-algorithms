@@ -4,15 +4,7 @@ package main
  * Cocktail sort - https://en.wikipedia.org/wiki/Cocktail_sort
  */
 
-import "fmt"
-
-import "github.com/0xAX/go-algorithms"
-
-func main() {
-	arr := utils.RandArray(10)
-	fmt.Println("Initial array is:", arr)
-	fmt.Println("")
-
+func CocktailSort(arr []int) {
 	tmp := 0
 
 	for i := 0; i < len(arr)/2; i++ {
@@ -38,6 +30,5 @@ func main() {
 			right--
 		}
 	}
-
-	fmt.Println("Sorted array is: ", arr)
 }
+
