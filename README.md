@@ -34,7 +34,7 @@ Algorithms
   * [binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
   * [linear search](https://en.wikipedia.org/wiki/Linear_search)
   * [jump search](https://en.wikipedia.org/wiki/Jump_search)
-  * [interpolation search](https://en.wikipedia.org/wiki/Interpolation_search)
+  * [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
 #### Collections
 
