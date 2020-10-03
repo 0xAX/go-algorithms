@@ -28,6 +28,7 @@ Algorithms
   * [heap sort](https://en.wikipedia.org/wiki/Heapsort)
   * [Shell sort](https://en.wikipedia.org/wiki/Shellsort)
   * [counting sort](https://en.wikipedia.org/wiki/Counting_sort)
+  * [radix sort](https://en.wikipedia.org/wiki/Radix_sort)
 
 #### Searching
 
