@@ -28,6 +28,7 @@ Algorithms
   * [heap sort](https://en.wikipedia.org/wiki/Heapsort)
   * [Shell sort](https://en.wikipedia.org/wiki/Shellsort)
   * [counting sort](https://en.wikipedia.org/wiki/Counting_sort)
+  * [radix sort](https://en.wikipedia.org/wiki/Radix_sort)
 
 #### Searching
 
@@ -35,6 +36,7 @@ Algorithms
   * [linear search](https://en.wikipedia.org/wiki/Linear_search)
   * [jump search](https://en.wikipedia.org/wiki/Jump_search)
   * [depth first search](https://en.wikipedia.org/wiki/Depth-first_search)
+  * [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
 #### Collections
 
