@@ -1,4 +1,4 @@
-// shorted distances between every pair of vertices using floyd-warshall algorithm
+// shortest distances between every pair of vertices using floyd-warshall algorithm
 // https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 // http://www.golangprograms.com/golang-program-for-implementation-of-floyd-warshall-algorithm.html
 package graph
