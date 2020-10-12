@@ -23,6 +23,9 @@ func maxSubarray(array []int) int {
 }
 
 func main() {
-	array := []int{-2, -5, 6, 0, -2, 0, -3, 1, 0, 5, -6}
+	array := []int{-3, -4, 7, 1, -2, 0, -5, 1, 0, 6, -5}
+	fmt.Println("Maximum subarray sum: ", maxSubarray(array))
+
+	array = []int{3, 4, -7, 2, 0, 0, -3, -1, 0, -5, 7}
 	fmt.Println("Maximum subarray sum: ", maxSubarray(array))
 }
