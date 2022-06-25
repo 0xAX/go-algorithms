@@ -44,13 +44,14 @@ Algorithms
   * [binary tree](https://en.wikipedia.org/wiki/Binary_search_tree)
   * [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
   * [queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
+  * [balanced_brackets](https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)
+
 
 #### Numerical
 
   * [gcd](https://en.wikipedia.org/wiki/Greatest_common_divisor)
   * [factorial](https://en.wikipedia.org/wiki/Factorial)
   * [fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number)
-
 Contribution
 ------------
 
