@@ -4,15 +4,9 @@ import (
 	"sync"
 )
 
-/* var list = []int{91, 28, 73, 46, 55, 64, 37, 82, 19}
-var max = 1000
-
-func main() {
-	fmt.Println("before:", list)
-	beadSort()
-	fmt.Println("after: ", list)
-} */
-
+/*
+ * Bead sort - https://en.wikipedia.org/wiki/Bead_sort
+ */
 func BeadSort(list []int) {
 	const bead = 'o'
 	max := 1000
