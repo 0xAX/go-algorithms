@@ -7,9 +7,9 @@ import (
 	utils "github.com/0xAX/go-algorithms"
 )
 
-var funcs = []struct{
+var funcs = []struct {
 	name string
-	f	 Sort
+	f    Sort
 }{
 	{"shell", ShellSort},
 	{"selection", SelectionSort},
@@ -21,6 +21,7 @@ var funcs = []struct{
 	{"comb", CombSort},
 	{"cocktail", CocktailSort},
 	{"bubble", BubbleSort},
+	{"bead", BeadSort},
 }
 
 func TestSort(t *testing.T) {

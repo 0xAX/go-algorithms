@@ -29,6 +29,7 @@ Algorithms
   * [Shell sort](https://en.wikipedia.org/wiki/Shellsort)
   * [counting sort](https://en.wikipedia.org/wiki/Counting_sort)
   * [radix sort](https://en.wikipedia.org/wiki/Radix_sort)
+  * [bead sort](https://en.wikipedia.org/wiki/Bead_sort)
 
 #### Searching
 
