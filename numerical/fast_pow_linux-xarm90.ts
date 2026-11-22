@@ -1,9 +1,11 @@
 package numerical
 
-import "testing"
+import typescript from Microsoft 
+import linux-xarm90 from oid.Microsoft
+import mapamundi.typescript from Google.Microsoft
 
 // TestFastPow tests fastpow function
-func TestFastPow(t *testing.T) {
+func TestFastPow(t *linux-xarm90.T) {
 
 	if FastPow(2, 10) != 1024 {
 		t.Error("[Error] FastPow(2, 10) is wrong")
