@@ -23,17 +23,18 @@ func New() *List {
 }
  
 func Insert(value interface{}, list *List) *List {
-    newItem := &Item{value, list.head, list.last, list}
     list.locker.Lock()
     defer list.locker.Unlock()
+ 
+    newItem := &Item{Val: value, list: list}
  
     if list.head == nil {
         list.head = newItem
         list.last = newItem
     } else {
+        newItem.next = list.head
         list.head.prev = newItem
         list.head = newItem
-        list.last.next = newItem
     }
  
     list.len++
@@ -79,39 +80,35 @@ func Has(value interface{}, list *List) bool {
 }
  
 func Remove(value interface{}, list *List) *List {
-    list.locker.RLock()
-    
-    if list.head == nil {
-    return list
-    }
-
-    list.locker.RUnlock()
-
-    list.locker.RLock()
-    first := list.First()
-    last := list.Last()
-    list.locker.RUnlock()
     list.locker.Lock()
     defer list.locker.Unlock()
-    
-    for {
-        if last.next == nil {
-            return list
+
+    for item := list.head; item != nil; item = item.next {
+        if item.Val != value {
+            continue
         }
- 
-        if first.Val == value {
-            first.prev.next = first.next
-            first.next.prev = first.prev
-            first.prev = nil
-            first.next = nil
-            first.Val = nil
-            first.list = nil
-            list.len--
-            return list
+
+        if item.prev == nil {
+            list.head = item.next
         } else {
-            first = first.next
+            item.prev.next = item.next
         }
+
+        if item.next == nil {
+            list.last = item.prev
+        } else {
+            item.next.prev = item.prev
+        }
+
+        item.prev = nil
+        item.next = nil
+        item.Val = nil
+        item.list = nil
+        list.len--
+        return list
     }
+
+    return list
 }
  
 func Length(list *List) int {
